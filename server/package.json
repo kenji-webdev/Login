@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/server.js",
-    "dev": "nodemon -L dist/server.js"
+    "dev": "nodemon -L --exec npx ts-node --esm ./src/server.ts"
   },
   "keywords": [],
   "author": "",

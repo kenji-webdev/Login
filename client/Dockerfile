@@ -1,5 +1,3 @@
-#STAGE 1 
-
 FROM node:18.16.0-alpine3.17
 
 WORKDIR /app
@@ -10,9 +8,12 @@ RUN npm ci
 
 COPY . .
 
-RUN npm run build
+#uncomment in prod
+#RUN npm run build
 
 EXPOSE 3000
 
-CMD ["npm", "run", "preview"]
+CMD ["npm", "run", "dev"]
 
+#uncomment in prod
+#CMD ["npm", "run", "preview"]
