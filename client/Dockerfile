@@ -4,7 +4,11 @@ WORKDIR /app
 
 COPY package*.json .
 
-RUN npm ci
+#comment in prod
+RUN npm i
+
+#uncomment in prod
+#RUN npm ci
 
 COPY . .
 
@@ -13,6 +17,7 @@ COPY . .
 
 EXPOSE 3000
 
+#comment in prod
 CMD ["npm", "run", "dev"]
 
 #uncomment in prod
